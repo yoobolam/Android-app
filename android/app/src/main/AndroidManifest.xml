@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:android.export="http://schemas.android.com/apk/res-auto"
+    package="com.example.bolam.sayusigan">
+
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.NFC" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-feature android:name="android.hardware.nfc"
+        android:required="true"/>
+    <uses-permission android:name="android.permission.VIBRATE" />
+    //진동
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/logo"
+        android:label="자유시간"
+        android:textColor="#3b1e1e"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme.NoActionBar">
+
+        <activity android:name=".first_loading.LoadingActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+                <intent-filter>
+                    <action android:name="android.intent.action.VIEW" />
+                    <category android:name="android.intent.category.DEFAULT" />
+                    <category android:name="android.intent.category.BROWSABLE" />
+                    <data android:host="free" android:scheme="time" />
+                </intent-filter>
+                <intent-filter>
+                    <action android:name="android.nfc.action.TAG_DISCOVERED" />
+                    <category android:name="android.intent.category.DEFAULT" />
+                    <data android:mimeType="application/com.example.bolam.sayusigan" />
+                </intent-filter>
+                <intent-filter>
+                    <action android:name="android.nfc.action.TECH_DISCOVERED" />
+                    <category android:name="android.intent.category.DEFAULT" />
+                    <data android:mimeType="application/com.example.bolam.sayusigan" />
+                </intent-filter>
+
+                <intent-filter>
+                    <action android:name="android.nfc.action.NOEF_DISCOVERED" />
+                    <category android:name="android.intent.category.DEFAULT" />
+                    <data android:mimeType="application/com.example.bolam.sayusigan" />
+                </intent-filter>
+            </activity>
+    <activity android:name=".two_select.SelectActivity"
+    android:theme="@style/AppTheme.NoActionBar1"     />
+    <activity
+    android:name=".three_main.MainActivity"
+    android:theme="@style/AppTheme.NoActionBar1"/>
+    <activity android:name=".two_select.BankSelectActivity"
+    android:theme="@style/AppTheme.NoActionBar1"/>
+    <activity android:name=".two_select.FoodSelectActivity"
+    android:theme="@style/AppTheme.NoActionBar1"/>
+
+    <activity android:name=".four_listfragment.three_click_listActivity_alarm_text.AlarmActivity"
+        android:theme="@style/AppTheme">
+        <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value=".three_main.MainActivity"/>
+    </activity>
+    <activity android:name=".four_listfragment.two_click_listfragment_listview.ListActivity"
+        android:theme="@style/AppTheme"
+        android:exported="true">
+        <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value=".three_main.MainActivity"/>
+    </activity>
+    <activity
+    android:name=".four_listfragment.three_click_listActivity_alarm_text.AlarmexampleActivity"
+    android:label="title_activity_alarmexample"
+    android:theme="@style/AppTheme"/>
+    <uses-library android:name="com.google.android.maps"/>
+    <meta-data
+    android:name="com.google.android.geo.API_KEY"
+    android:value="AIzaSyAZCkwGur2nK-j8Ct6en5uQYbCcstlovuE" />
+    <activity android:name=".six_mapactivity.MapActivity"
+        android:theme="@style/AppTheme">
+    <meta-data
+    android:name="android.support.PARENT_ACTIVITY"
+    android:value=".three_main.MainActivity"/>
+    </activity>
+        </application>
+
+        </manifest>

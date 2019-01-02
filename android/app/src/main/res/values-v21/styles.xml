@@ -1,0 +1,13 @@
+<resources>
+
+    <style name="AppTheme.NoActionBar">
+    <item name="windowActionBar">false</item>
+    <item name="windowNoTitle">true</item>
+    <item name="android:statusBarColor">#c6e4fe</item>  //파란색으로 바꾸기
+</style>
+    <style name="AppTheme.NoActionBar1">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:statusBarColor">#3b1e1e</item>
+    </style>
+</resources>

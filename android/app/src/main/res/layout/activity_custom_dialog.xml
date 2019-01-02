@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_custom"
+    android:layout_gravity="center">
+<LinearLayout
+    android:layout_width="300dp"
+    android:layout_height="200dp"
+    android:orientation="vertical">
+    <TextView
+        android:id="@+id/tv_content"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:textColor="#000000"
+        android:text="dasdasd"
+        android:layout_height="150dp" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#c2c2c2"></LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <Button
+            android:id="@+id/btn_cancel"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="취소"
+            android:textColor="#215099"
+            android:gravity="center"
+            android:background="@null"
+            android:layout_weight="1" />
+        <LinearLayout
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="#c2c2c2"></LinearLayout>
+        <Button
+            android:id="@+id/btn_ok"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:text="확인"
+            android:gravity="center"
+            android:background="@null"
+            android:textColor="#215099"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+
+</LinearLayout>
+</LinearLayout>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_listview"
+            android:icon="@drawable/ic_action_name"
+            android:title="대기표 리스트" />
+        <item
+            android:id="@+id/nav_recentview"
+            android:icon="@drawable/ic_store_black_24dp"
+            android:title="최근 방문 기록" />
+        <item
+            android:id="@+id/nav_mapview"
+            android:icon="@drawable/ic_map_black_24dp"
+            android:title="대기시간 지도검색" />
+        <item
+            android:id="@+id/nav_vipview"
+            android:icon="@drawable/ic_person_black_24dp"
+            android:title="VIP Service" />
+    </group>
+
+
+
+</menu>

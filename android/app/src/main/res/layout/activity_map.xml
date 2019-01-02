@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.bolam.sayusigan.six_mapactivity.MapActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/edit_text"
+            android:layout_width="198dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="위치를 지정해주세요"
+            android:textColorHint="#ff0000"/>
+
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="78dp"
+            android:layout_height="37dp"
+
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="2dp"
+            android:background="@drawable/frame"
+            android:paddingTop="2dp"
+            android:text="찾기" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="77dp"
+            android:layout_height="37dp"
+
+            android:layout_marginRight="4dp"
+            android:background="@drawable/frame"
+            android:paddingTop="2dp"
+            android:text="내 위치" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="70dp"
+        android:layout_height="0dp"
+        android:textColor="#FAFAFA" />
+    <fragment
+        android:id="@+id/maps"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+</LinearLayout>
